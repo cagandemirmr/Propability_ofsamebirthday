@@ -1,0 +1,14 @@
+farkli_yas=1-364/365
+def son(n):
+    return (366 - n) / 365
+
+deger = []
+for i in range(1, 60):
+    deger.append(i)
+
+for i in range(1, 60):
+    sonuc = 1
+    for j in range(i):
+        sonuc *= (364.0 - deger[j]) / 365.0
+    if sonuc * farkli_yas * son(i) > 0.5:
+        print(deger[i-1])
